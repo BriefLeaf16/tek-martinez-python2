@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Have a puppy that needs to be cared for?</h1>
+  <p>Add a new puppy to our database!</p>
+  <form method="POST">
+    {{form.hidden_tag()}}
+    {{form.pup_name.label}} {{form.pup_name()}}
+    <br>
+    <br>
+    {{form.owner_name.label}} {{form.owner_name()}}
+    <br>
+    <br>
+    {{form.pup_color.label}} {{form.pup_color()}}
+    <br>
+    <br>
+    {{form.pup_height.label}} {{form.pup_height()}}
+    <br>
+    <br>
+    {{form.pup_breed.label}} {{form.pup_breed()}}
+    <br>
+    <br>
+    {{form.submit()}}
+  </form>
+
+
+</div>
+{% endblock %}
